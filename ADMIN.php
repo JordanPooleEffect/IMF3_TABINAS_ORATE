@@ -72,7 +72,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 header("Location: ADMIN_dashboard-page.php?view=answers");
                 exit();
             } else if ($_POST['type'] === 'questions') {
-                $sql = "UPDATE questions SET is_deleted = 1 WHERE QuestionID = ?";
+                $sql = "UPDATE tblquestion SET is_deleted = 1 WHERE QuestionID = ?";
                 $stmt = $connection->prepare($sql);
                 $stmt->bind_param("i", $deleteId);
                 $stmt->execute();

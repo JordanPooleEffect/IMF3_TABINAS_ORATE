@@ -35,11 +35,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $stmt->bind_param('iis', $questionID, $userID, $answerText);
         if ($stmt->execute()) {
             $message = "Answer submitted successfully.";
-            // Update the questions array to mark the question as answered
             foreach ($questions as $key => $question) {
                 if ($question['QuestionID'] == $questionID) {
                     $questions[$key]['Answered'] = true;
-                    break; // Exit the loop once the question is marked as answered
+                    break;
                 }
             }
         } else {
