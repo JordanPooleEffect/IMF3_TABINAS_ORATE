@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Body */
+.login {
+    background-image: url("../images/inspo.png");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+
+/* Container */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Login content */
+.login-content {
+    display: flex;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+    width: 40%;
+    height: 925px;
+    overflow: hidden;
+}
+
+/* Left column */
+.image-column {
+    width: 50%;
+    height: 100%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+
+.login-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Right column */
+.credentials-column {
+    width: 50%;
+    padding: 20px;
+    background-color: white;
+}
+
+.credentials-column h2 {
+    text-align: left;
+    margin-left: 55px;
+    margin-top: 55px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 800;
+}
+
+.under-title {
+    text-align: left;
+    margin-left: 55px;
+    margin-bottom: 30px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.6);
+    margin-top: -10px;
+    font-size: 13px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+}
+
+label {
+    display: block; 
+    text-align: left;
+    margin-bottom: 5px;
+    margin-left: 55px;
+    font-size: 13px;
+    color: rgba(0, 0, 0, 0.4);
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="date"] {
+    width: 70%;
+    padding-bottom: 5px;
+    border: none;
+    border-bottom: 2px solid #d60036;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus,
+input[type="date"]:focus {
+    border-bottom-color: #d60036;
+    outline: none;
+}
+
+input::placeholder {
+    font-size: 12px; 
+    color: rgba(0, 0, 0, 0.5);
+}
+
+
+.login-button {
+    width: 65%;
+    padding: 10px;
+    border: none;
+    border-radius: 25px;
+    background-color: #d60036;
+    color: white;
+    cursor: pointer;
+    margin-left: 60px;
+    margin-top: 20px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+}
+
+.login-button:hover {
+    background-color: #4caf50;
+}
+
+.register-link {
+    text-align: center;
+    margin-top: 10px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.register-link a {
+    color: #d60036;
+    text-decoration: none;
+}
+
+.register-link a:hover {
+    text-decoration: underline;
+}
+
+/* genderbox */
+.gender-details-box {
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.gender-title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.gender-category {
+    display: flex;
+    align-items: center;
+}
+
+.gender-category input[type="radio"] {
+    display: none;
+}
+
+.gender-category label {
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: #e0e0e0;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    color: #333;
+    transition: background-color 0.2s;
+    margin-right: -30px;
+    width: 50px;
+    text-align: center;
+}
+
+.gender-category input[type="radio"]:checked + label {
+    background-color: #d60036;
+    color: white;
+}
+
+
