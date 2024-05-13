@@ -35,10 +35,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $stmt->bind_param('iis', $questionID, $userID, $answerText);
         if ($stmt->execute()) {
             $message = "Answer submitted successfully.";
+            // Update the questions array to mark the question as answered
             foreach ($questions as $key => $question) {
                 if ($question['QuestionID'] == $questionID) {
                     $questions[$key]['Answered'] = true;
-                    break; 
+                    break; // Exit the loop once the question is marked as answered
                 }
             }
         } else {
@@ -47,7 +48,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $stmt->close();
     } else {
         $message = "Error preparing statement: {$connection->error}";
-    } 
+    } //hello
 }
 ?>
 
@@ -107,5 +108,4 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     </div>
 </body>
-
 </html>

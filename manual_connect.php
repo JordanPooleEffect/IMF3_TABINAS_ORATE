@@ -35,7 +35,7 @@ try {
                         is_deleted TINYINT(1) NOT NULL DEFAULT 0
                     )";
 
-    $questions = "CREATE TABLE IF NOT EXISTS tblquestion (
+    $questions = "CREATE TABLE IF NOT EXISTS questions (
                         QuestionID INT(11) AUTO_INCREMENT PRIMARY KEY,
                         UserID INT(11) NOT NULL,
                         QuestionText TEXT NOT NULL,
