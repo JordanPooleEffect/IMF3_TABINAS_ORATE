@@ -189,7 +189,7 @@ $view = isset($_GET['view']) ? $_GET['view'] : 'records';
                         echo "<td>" . htmlspecialchars($row["QuestionID"]) . "</td>";
                         echo "<td>" . htmlspecialchars($row["AnswerText"]) . "</td>";
                         echo "<td>" . htmlspecialchars($row["Timestamp"]) . "</td>";
-                        echo "<td><button type='button' name='update_btn' onclick='confirmAnswer(" . $row['UserID'] . ");'>Update</button>
+                        echo "<td>
                              <button type='button' name='soft_delete' onclick='showDeleteConfirmation(" . $row['AnswerID'] . ")'>Soft Delete</button></td>";
                         echo "</form></tr>";
                     }
@@ -224,7 +224,7 @@ $view = isset($_GET['view']) ? $_GET['view'] : 'records';
                         echo "<td>" . htmlspecialchars($row["firstname"]) . " " . htmlspecialchars($row["lastname"]) . "</td>";
                         echo "<td><input type='text' name='QuestionText' value='" . htmlspecialchars($row["QuestionText"]) . "'></td>";
                         echo "<td>" . htmlspecialchars($row["Timestamp"]) . "</td>";
-                        echo "<td><button type='submit' name='update'>Update</button>
+                        echo "<td>
                               <button type='submit' name='delete' onclick='return confirm(\"Are you sure?\");'>Delete</button></td>";
                         echo "</form></tr>";
                     }
